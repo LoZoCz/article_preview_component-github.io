@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+:root{
+    --dark-grey-blue: hsl(217, 19%, 35%);
+    --desaturated-blue: hsl(214, 17%, 51%);
+    --grey-blue: hsl(212, 23%, 69%);
+    --light-grey: hsl(210, 46%, 95%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Manrope;
+    background: var(--light-grey);
+}
+
+.container{
+    background: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    width: 120vh;
+    border-radius: 15px;
+    color: var(--dark-grey-blue);
+    position: relative;
+}
+
+.container__img > img{
+    border-radius: 15px 0px 0px 15px;
+    height: 100%; 
+    width: 100%; 
+}
+
+.container__paras{
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.container__paras > h1{
+    letter-spacing: .7px;
+    line-height: 35px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.container__paras > p{
+    width: 50vh;
+    color: var(--desaturated-blue);
+}
+
+.--flex-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    bottom: 0px;
+}
+
+.--bold{
+    font-weight: 800;
+}
+
+.--thin{
+    color: var(--desaturated-blue);
+}
+
+.--inner-flex-box{
+    display: flex;
+    gap: 10px;
+    z-index: 1;
+}
+
+.--inner-flex-box > img{
+    width: 50px;
+    border-radius: 50%;
+}
+
+.--inner-flex-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.js-share-button{
+    display: none;
+}
+
+.js-share-button:checked ~ .--pop-out-mess{
+    display: flex;
+    animation: anim-show 1s;
+}
+
+@keyframes anim-show {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.--pop-out-mess{
+    position: absolute;
+    bottom: 60px;
+    right: -83px;
+    background: var(--dark-grey-blue);
+    color: var(--grey-blue);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    border-radius: 10px;
+    display: none;
+    z-index: 99;
+    transition: all ease-in-out .15s;
+}
+
+.--pop-out-mess > p{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.--pop-out-mess > a > i::before{
+    color: var(--white);
+}
+
+.--pop-out-mess > span{
+    width: 0; 
+    height: 0; 
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid var(--dark-grey-blue);
+    position: inherit;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.--cover-share-input{
+    background: var(--desaturated-blue);
+    color: var(--white);
+    padding: 7px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999 !important;
+}
+
+.--share-button{
+    z-index: 999 !important;
+}

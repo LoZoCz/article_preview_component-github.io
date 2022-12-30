@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Article preview component</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media.css">
+  <script src="script.js" defer></script>
+  <script src="https://kit.fontawesome.com/c4587b3804.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <main class="container">
+    <div class="container__img">
+      <img src="images/drawers.jpg" alt="drawers">
+    </div>
+    <div class="container__paras">
+      <h1>
+        Shift the overall look and feel by adding these wonderful touches to furniture in your home
+      </h1>
+      <p>
+        Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I`ve got some simple tips to help you make any room feel complete.
+      </p>
+      <div class="--flex-box">
+        <div class="--inner-flex-box">
+          <img src="images/avatar-michelle.jpg" alt="avatar-michelle">
+          <div class="--paras-box">
+            <p class="--bold">
+              Michelle Appleton
+            </p>
+            <p class="--thin">
+              28 Jun 2020
+            </p>
+          </div>
+        </div>
+        <input type="checkbox" id="--share-button" class="js-share-button" data-state="not-active">
+        <label for="--share-button">
+            <span class="--cover-share-input">
+              <i class="fa-solid fa-share"></i>   
+            </span>     
+        </label>
+        <nav class="--pop-out-mess">
+          <span></span>
+          <p>share</p>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.frontendmentor.io/"><i class="fa-brands fa-square-facebook"></i></a>
+          <a href="https://twitter.com/intent/tweet?text=Let%60s%20try%20in%20out%3A%20%0Ahttps%3A//www.frontendmentor.io/%0A%F0%9F%91%8C%F0%9F%91%8D%F0%9F%91%8D%F0%9F%91%8C"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://pl.pinterest.com/search/pins/?rs=ac&len=2&q=frontend%20mentor&eq=frontend%20men&etslf=7150"><i class="fa-brands fa-pinterest"></i></a>
+        </nav>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
